@@ -17,7 +17,7 @@ Currency::~Currency()
 
 void Currency::Information()
 {
-    int CountCurrencies = (sizeof(NameCurrency)/sizeof(*NameCurrency));
+    int countCurrencies = (sizeof(nameCurrency)/sizeof(*nameCurrency));
 
     while (true)
     {
@@ -25,12 +25,12 @@ void Currency::Information()
         cout << "Which currency do you want to convert?\n" << e;
         cout << "USD TO : \n" << e;
                         
-        for (int i = 0; i < CountCurrencies; i++)
+        for (int i = 0; i < countCurrencies; i++)
         {
-            cout << i + 1 << ". " + NameCurrency[i] << e; 
+            cout << i + 1 << ". " + nameCurrency[i] << e; 
         }
                         
-        if(VerificationInt(CountCurrencies , true))
+        if(VerificationInt(countCurrencies , true))
         {
             break;
         }
@@ -46,7 +46,7 @@ bool Currency::VerificationInt(int Num , bool IsOpc)
         if (IsOpc)
             cin >> opc;
         else
-            cin >> Money;
+            cin >> money;
 		if (!cin.good())
 		{
             system("cls");
@@ -84,7 +84,7 @@ void Currency::WhatChanges()
     {
         system("cls");
 
-        cout << "How many money do you want to exchange into " << NameCurrency[opc] << "?" << e;
+        cout << "How many money do you want to exchange into " << nameCurrency[opc] << "?" << e;
 
         if (VerificationInt(0, false))
         {
@@ -98,25 +98,25 @@ void Currency::Result()
 {
     system("cls");
     cout.imbue(std::locale(""));
-    Money = ceil(Money * 100.0) / 100.0;
-    if (Money > 1000000)
+    money = ceil(money * 100.0) / 100.0;
+    if (money > 1000000)
     {
-        int iMoney = Money;
+        int iMoney = money;
         cout << "You have put " << iMoney << " " << "USD\n" << e;
     }
     else 
-        cout << "You have put " << Money << " " << "USD\n" << e;
+        cout << "You have put " << money << " " << "USD\n" << e;
 
-    Money = Money * ValueCurrency[opc];
-    Money = ceil(Money * 100.0) / 100.0;
+    money = money * valueCurrency[opc];
+    money = ceil(money * 100.0) / 100.0;
 
-    if (Money > 1000000)
+    if (money > 1000000)
     {
-        int iMoney = Money;
-        cout << "You have " << iMoney << " " << CurrencySymbols[opc] << "\n" << e;
+        int iMoney = money;
+        cout << "You have " << iMoney << " " << currencySymbols[opc] << "\n" << e;
     }
     else 
-        cout << "You have " << Money << " " << CurrencySymbols[opc] << "\n" << e;
+        cout << "You have " << money << " " << currencySymbols[opc] << "\n" << e;
 }
 
 int main()

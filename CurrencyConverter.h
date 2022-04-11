@@ -16,12 +16,12 @@ using namespace std;
 class Currency
 {
 private:
-    static int const TotalCurrency = 7;
-    double ValueCurrency[TotalCurrency]{ 0.91941 , 124.24357 , 1.25668 , 20.0371 , 6.3652 , 79.0690 , 0.76714 };
-    string NameCurrency[TotalCurrency]{ "EURO" , "YEN" , "CAD" , "MXN" , "YUAN" , "Ruble" , "GBP"};
-    string CurrencySymbols[TotalCurrency]{ "EUR" , "JPY" , "CAD" , "MXN" , "CNY" , "RUB" , "GBP"};
+    static int const totalCurrency = 7;
+    double valueCurrency[totalCurrency]{ 0.91941 , 124.24357 , 1.25668 , 20.0371 , 6.3652 , 79.0690 , 0.76714 };
+    string nameCurrency[totalCurrency]{ "EURO" , "YEN" , "CAD" , "MXN" , "YUAN" , "Ruble" , "GBP"};
+    string currencySymbols[totalCurrency]{ "EUR" , "JPY" , "CAD" , "MXN" , "CNY" , "RUB" , "GBP"};
     int opc;
-    long double Money;
+    long double money;
 public:
     Currency();
     ~Currency();
