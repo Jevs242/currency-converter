@@ -8,7 +8,7 @@ Before you begin, ensure you have `g++` installed on your system to compile the 
 
 ## Compiling the Program
 
-To compile the Brisca program, open a terminal in the directory containing `currency-converter.cpp` and execute the following command:
+To compile the Currency Converter program, open a terminal in the directory containing `currency-converter.cpp` and execute the following command:
 
 ```bash
 g++ -o currency-converter currency-converter.cpp
