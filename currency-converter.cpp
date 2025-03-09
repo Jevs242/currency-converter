@@ -1,8 +1,26 @@
 ﻿//Jose Velazquez
 //Currency Converter
 
-#include "CurrencyConverter.h"
+#include "currency-converter.h"
 
+
+void ClearScreen() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+void Pause() {
+#ifdef _WIN32
+    system("pause");
+#else
+    std::cout << "Press Enter to continue...";
+    std::cin.ignore();
+    std::cin.get();
+#endif
+}
 
 Currency::Currency()
 {
@@ -12,8 +30,9 @@ Currency::Currency()
 
 Currency::~Currency()
 {
-    system("pause");
+    Pause();
 }
+
 
 void Currency::Information()
 {
@@ -49,7 +68,7 @@ bool Currency::VerificationInt(int Num , bool IsOpc)
             cin >> money;
 		if (!cin.good())
 		{
-            system("cls");
+            ClearScreen();
 			cout << "Only Numbers " << e;
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -63,7 +82,7 @@ bool Currency::VerificationInt(int Num , bool IsOpc)
             }
             else
             {
-                system("cls");
+                ClearScreen();
                 cout << "Only Numbers from " << "0 to " << Num << e;
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -82,7 +101,7 @@ void Currency::WhatChanges()
 {
     while (true)
     {
-        system("cls");
+        ClearScreen();
 
         cout << "How many money do you want to exchange into " << nameCurrency[opc] << "?" << e;
 
@@ -96,7 +115,7 @@ void Currency::WhatChanges()
 
 void Currency::Result()
 {
-    system("cls");
+    ClearScreen();
     cout.imbue(std::locale(""));
     money = ceil(money * 100.0) / 100.0;
     if (money > 1000000)
