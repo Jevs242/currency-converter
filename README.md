@@ -8,15 +8,15 @@ Before you begin, ensure you have `g++` installed on your system to compile the 
 
 ## Compiling the Program
 
-To compile the Currency Converter program, open a terminal in the directory containing `currency-converter.cpp` and execute the following command:
+To compile the Currency Converter program, open a terminal in the directory containing `converter.cpp` and execute the following command:
 
 ```bash
-g++ -o currency-converter currency-converter.cpp
+g++ -o converter converter.cpp
 ```
 
 ## Running the program
 
 After compiling the program, you can run it by executing:
 ```bash
-./currency-converter
+./converter
 ```
