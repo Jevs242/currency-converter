@@ -1,7 +1,7 @@
 ﻿//Jose Velazquez
 //Currency Converter
 
-#include "currency-converter.h"
+#include "converter.h"
 
 
 void ClearScreen() {
